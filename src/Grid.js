@@ -14,6 +14,10 @@ class Grid extends Component {
 
     }
 
+    componentWillUnmount() {
+        this.removeEventListener('onKeyDown', this.handleKeyPress);
+    }
+
     createGrid(props) {
         // Input size of board, out put dictionary
         var data_set = {},
@@ -46,7 +50,7 @@ class Grid extends Component {
         const randomValue = _.random(0, 1);
         const obj = {};
 
-        obj[randomKey] = {"value": 2};
+        obj[randomKey] = {"value": values[randomValue]};
         let foo = _.extend(board[randomKey], obj[randomKey]); // {9: {p:9, v:2}}
         return board;
     }
