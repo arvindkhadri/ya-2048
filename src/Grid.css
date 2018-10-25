@@ -1,0 +1,21 @@
+.tile {
+    width: 107px;
+    height: 107px;
+    border: solid 3px;
+    /*text-align: center;*/
+    position: relative;
+    background: #bbada0;
+}
+
+.content {
+    position:absolute; /*it can be fixed too*/
+    left:50%; 
+    top:50%; 
+    transform: translate(-50%, -50%);
+    font-size: 40px;
+    font-family: "Clear Sans", "Helvetica Neue", Arial, sans-serif;
+}
+
+body {
+    background: #faf8ef;
+}
